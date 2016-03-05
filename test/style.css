@@ -28,7 +28,16 @@ html {
     background-color: black;
   }
 }
+p {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  animation-name: display;
+  animation-duration: 20s;
+  animation-iteration-count: 1;
 
+}
 #toggle {
   border: none;
   outline:none;
