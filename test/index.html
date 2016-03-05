@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=380px">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="NoSleep.min.js"></script>
+  <script>
+  var noSleep = new NoSleep();
+
+function enableNoSleep() {
+  noSleep.enable();
+  document.removeEventListener('touchstart', enableNoSleep, false);
+}
+document.addEventListener('load', enableNoSleep, false);
+</script>
+<title>Test</title>
+</head>
+
+<body>
+  <div class="flicker"></div>
+</body>
+</html>
