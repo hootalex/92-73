@@ -1,5 +1,6 @@
-<!DOCTYPE html>
 
+
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -7,44 +8,44 @@
   <link href="style.css" rel="stylesheet" type="text/css">
   <script src="NoSleep.js"></script>
 
-  <input type="button" id="toggle" value="begin?" />
+    <input type="button" id="toggle" value="begin?" />
 
-  <audio id="soundHandle" style="display:none;" src="https://www.dropbox.com/s/6uh119mwj6th639/Nov%209%20Kim%20S%20Robinson.mp3?dl=1"></audio>
+    <script>
+      var noSleep = new NoSleep();
 
-  <script>
-    var noSleep = new NoSleep();
+      var wakeLockEnabled = false;
+      var toggleEl = document.querySelector("#toggle");
+      toggleEl.addEventListener('click', function() {
+        if (!wakeLockEnabled) {
+          noSleep.enable();
+          wakeLockEnabled = true;
+          toggleEl.value = "bag ready";
+        } else {
+          noSleep.enable();
+          wakeLockEnabled = true;
+          toggleEl.value = "bag ready";
+        }
+      }, false);
+    </script>
+    <script type="text/javascript">
 
-    var wakeLockEnabled = false;
-    var toggleEl = document.querySelector("#toggle");
-    toggleEl.addEventListener('click', function() {
-    if (!wakeLockEnabled) {
-      noSleep.enable();
-      wakeLockEnabled = true;
-      toggleEl.value = "bag ready";
-    } else {
-      noSleep.enable();
-      wakeLockEnabled = true;
-      toggleEl.value = "bag ready";
-    }
-    }, false);
+var soundHandle = document.getElementById('soundHandle');
 
-    });
-
-    var soundHandle = document.getElementById('soundHandle');
-
-    $(document).ready(function() {
-      addEventListener('touchstart', function(e) {
+$(document).ready(function() {
+    addEventListener('touchstart', function (e) {
         soundHandle.src = 'audio.mp3';
         soundHandle.loop = true;
         soundHandle.play();
         soundHandle.pause();
-      });
     });
-  </script>
-  <title>Test</title>
+});
+
+</script>
+<title>Test</title>
 </head>
 
 <body>
-</body>
+  <audio id="soundHandle" src="https://www.dropbox.com/s/6uh119mwj6th639/Nov%209%20Kim%20S%20Robinson.mp3?dl=1" style="display:none;"></audio>
 
+</body>
 </html>
