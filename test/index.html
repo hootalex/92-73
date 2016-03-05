@@ -1,6 +1,5 @@
-
-
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -8,28 +7,44 @@
   <link href="style.css" rel="stylesheet" type="text/css">
   <script src="NoSleep.js"></script>
 
-    <input type="button" id="toggle" value="begin?" />
+  <input type="button" id="toggle" value="begin?" />
 
-    <script>
-      var noSleep = new NoSleep();
+  <audio id="soundHandle" style="display:none;" src="https://www.dropbox.com/s/6uh119mwj6th639/Nov%209%20Kim%20S%20Robinson.mp3?dl=1"></audio>
 
-      var wakeLockEnabled = false;
-      var toggleEl = document.querySelector("#toggle");
-      toggleEl.addEventListener('click', function() {
-        if (!wakeLockEnabled) {
-          noSleep.enable();
-          wakeLockEnabled = true;
-          toggleEl.value = "bag ready";
-        } else {
-          noSleep.enable();
-          wakeLockEnabled = true;
-          toggleEl.value = "bag ready";
-        }
-      }, false);
-    </script>
-<title>Test</title>
+  <script>
+    var noSleep = new NoSleep();
+
+    var wakeLockEnabled = false;
+    var toggleEl = document.querySelector("#toggle");
+    toggleEl.addEventListener('click', function() {
+    if (!wakeLockEnabled) {
+      noSleep.enable();
+      wakeLockEnabled = true;
+      toggleEl.value = "bag ready";
+    } else {
+      noSleep.enable();
+      wakeLockEnabled = true;
+      toggleEl.value = "bag ready";
+    }
+    }, false);
+
+    });
+
+    var soundHandle = document.getElementById('soundHandle');
+
+    $(document).ready(function() {
+      addEventListener('touchstart', function(e) {
+        soundHandle.src = 'audio.mp3';
+        soundHandle.loop = true;
+        soundHandle.play();
+        soundHandle.pause();
+      });
+    });
+  </script>
+  <title>Test</title>
 </head>
 
 <body>
 </body>
+
 </html>
