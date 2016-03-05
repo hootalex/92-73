@@ -1,19 +1,31 @@
+
 <!DOCTYPE html>
 <html>
 
 <head>
   <meta name="viewport" content="width=380px">
   <link href="style.css" rel="stylesheet" type="text/css">
-  <script src="NoSleep.min.js"></script>
-  <script>
-  var noSleep = new NoSleep();
+  <script src="NoSleep.js"></script>
+  <div class="hide">
+  <input type="button" id="toggle" value="Wake Lock Disabled" /></div>
 
-function enableNoSleep() {
-  noSleep.enable();
-  document.removeEventListener('touchstart', enableNoSleep, false);
-}
-document.addEventListener('load', enableNoSleep, false);
-</script>
+  <script>
+    var noSleep = new NoSleep();
+
+    var wakeLockEnabled = false;
+    var toggleEl = document.querySelector("#toggle");
+    toggleEl.addEventListener('click', function() {
+      if (!wakeLockEnabled) {
+        noSleep.enable(); // keep the screen on!
+        wakeLockEnabled = true;
+        toggleEl.value = "Wake Lock Enabled";
+      } else {
+        noSleep.disable(); // let the screen turn off.
+        wakeLockEnabled = false;
+        toggleEl.value = "Wake Lock Disabled";
+      }
+    }, false);
+  </script>
 <title>Test1</title>
 </head>
 
