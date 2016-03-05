@@ -1,0 +1,33 @@
+html {
+  background-color: black;
+  animation-name: color;
+  animation-duration: 22.2s;
+  animation-iteration-count: infinite;
+}
+@keyframes color {
+  0% {
+    background-color: black;
+  }
+  24.89% {
+    background-color: black;
+  }
+  25% {
+    background-color: red;
+  }
+  50% {
+    background-color: black;
+  }
+  74.99% {
+    background-color: black;
+  }
+  75% {
+    background-color: red;
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+.hide {
+  display: none;
+}
