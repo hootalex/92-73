@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 
@@ -7,7 +8,7 @@
   <link href="style.css" rel="stylesheet" type="text/css">
   <script src="NoSleep.js"></script>
 
-    <input type="button" id="toggle" value="Wake Lock Disabled" />
+    <input type="button" id="toggle" value="begin" />
 
     <script>
       var noSleep = new NoSleep();
@@ -18,11 +19,11 @@
         if (!wakeLockEnabled) {
           noSleep.enable(); // keep the screen on!
           wakeLockEnabled = true;
-          toggleEl.value = "Wake Lock Enabled";
+          toggleEl.value = "bag ready";
         } else {
           noSleep.disable(); // let the screen turn off.
           wakeLockEnabled = false;
-          toggleEl.value = "Wake Lock Disabled";
+          toggleEl.value = ":(";
         }
       }, false);
     </script>
@@ -30,6 +31,5 @@
 </head>
 
 <body>
-  <div class="flicker"></div>
 </body>
 </html>

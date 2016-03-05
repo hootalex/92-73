@@ -3,6 +3,7 @@ html {
   animation-name: color;
   animation-duration: 22.2s;
   animation-iteration-count: infinite;
+  animation-delay: 20s;
 }
 @keyframes color {
   0% {
@@ -27,3 +28,38 @@ html {
     background-color: black;
   }
 }
+
+#toggle {
+  border: none;
+  outline:none;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 3px;
+  margin-top: 100px;
+  animation-name: display;
+  animation-duration: 20s;
+  animation-iteration-count: 1;
+}
+
+@keyframes display {
+  0% {
+    color: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 1);
+  }
+
+  80% {
+    color: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 1);
+      margin-top: 100px;
+  }
+
+  100% {
+    margin-top: 5000px;
+  }
