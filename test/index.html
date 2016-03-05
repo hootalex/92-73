@@ -17,13 +17,13 @@
       var toggleEl = document.querySelector("#toggle");
       toggleEl.addEventListener('click', function() {
         if (!wakeLockEnabled) {
-          noSleep.enable(); // keep the screen on!
+          noSleep.enable();
           wakeLockEnabled = true;
           toggleEl.value = "bag ready";
         } else {
-          noSleep.enable(); // let the screen turn off.
-          wakeLockEnabled = false;
-          toggleEl.value = "BAG READY";
+          noSleep.enable();
+          wakeLockEnabled = true;
+          toggleEl.value = "bag ready";
         }
       }, false);
     </script>
