@@ -55,15 +55,14 @@
   // Disable NoSleep instance
   NoSleep.prototype.disable = function() {
     if (ua.iOS) {
-      this.disable();
-      this.noSleepTimer = window.setInterval(function() {
-        window.location.href = '/';
-        window.setTimeout(window.stop, 0);
-      }, duration || 15000);
+      if (this.noSleepTimer) {
+        window.clearInterval(this.noSleepTimer);
+        this.noSleepTimer = null;
+      }
     } else if (ua.Android) {
-      this.noSleepVideo.play();
+      this.noSleepVideo.pause();
     }
-    };
+  };
 
   // Append NoSleep API to root object
   root.NoSleep = NoSleep;
