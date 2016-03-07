@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=380px">
+  <link href="http://juneau.io/style.css" rel="stylesheet" type="text/css">
+  <script src="http://juneau.io/NoSleep.js"></script>
+
+    <input type="button" id="toggle" value="begin?" />
+
+    <script>
+      var noSleep = new NoSleep();
+
+      var wakeLockEnabled = false;
+      var toggleEl = document.querySelector("#toggle");
+      toggleEl.addEventListener('click', function() {
+        if (!wakeLockEnabled) {
+          noSleep.enable();
+          wakeLockEnabled = true;
+          toggleEl.value = "ready";
+          document.getElementById('audio').play();
+        } else {
+          noSleep.enable();
+          wakeLockEnabled = true;
+          toggleEl.value = "ready";
+        }
+      }, false);
+    </script>
+<title>Jakob</title>
+</head>
+
+<body>
+  <audio loop id="audio" src="http://juneau.io/names/jacob.mp3">
+       </audio>
+</body>
+</html>
