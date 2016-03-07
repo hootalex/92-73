@@ -1,0 +1,65 @@
+html {
+  background-color: black;
+  animation-name: color;
+  animation-duration: 22.2s;
+  animation-iteration-count: infinite;
+  animation-delay: 20s;
+}
+@keyframes color {
+  0% {
+    background-color: black;
+  }
+  24.89% {
+    background-color: black;
+  }
+  25% {
+    background-color: red;
+  }
+  50% {
+    background-color: black;
+  }
+  74.99% {
+    background-color: black;
+  }
+  75% {
+    background-color: red;
+  }
+  100% {
+    background-color: black;
+  }
+}
+#toggle {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 3px;
+  margin-top: 5000px;
+  animation-name: display;
+  animation-duration: 20s;
+  animation-iteration-count: 1;
+}
+
+@keyframes display {
+  0% {
+    color: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 1);
+    margin-top: 50px;
+  }
+
+  80% {
+    color: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 1);
+      margin-top: 50px;
+  }
+
+  100% {
+    margin-top: -5000px;
+  }
+}
