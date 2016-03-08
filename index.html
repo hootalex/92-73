@@ -33,7 +33,7 @@
         noSleep.enable();
         wakeLockEnabled = true;
         toggleEl.value = "ready";
-        document.getElementById('audio').play();
+        setTimeout(function() {document.getElementById('audio').play(); }, 2000);
         } else {
         noSleep.enable();
         wakeLockEnabled = true;
