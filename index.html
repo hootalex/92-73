@@ -2,19 +2,49 @@
 <html>
 
 <head>
-<title>Juneau</title>
+  <meta name="viewport" content="width=380px">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  </script>
+  <script>
+    $(document).ready(function() {
+      var name = prompt("What's your name?");
+      var name = name.toLowerCase();
+      $("title").html(name);
+      $("audio").attr("src", "names/" + (name) + ".mp3");
+      $("#toggle").addClass("toggleani")
+      $("html").addClass("begin")
+    });
+  </script>
+  <script src="NoSleep.js"></script>
+
+  <input type="button" id="toggle" value="begin?" />
+
+  <script>
+    var noSleep = new NoSleep();
+
+    var wakeLockEnabled = false;
+    var toggleEl = document.querySelector("#toggle");
+    toggleEl.addEventListener('click', function() {
+      if (!wakeLockEnabled) {
+        noSleep.enable();
+        wakeLockEnabled = true;
+        toggleEl.value = "ready";
+        document.getElementById('audio').play();
+      } else {
+        noSleep.enable();
+        wakeLockEnabled = true;
+        toggleEl.value = "ready";
+      }
+    }, false);
+  </script>
+  <title>juneau</title>
 </head>
-<style>
-html {
-  background-color: black;
-  color: white;
-  text-align: center;
-}
-</style>
+
 <body>
-<h1>juneau.io/yourname (on mobile)</h1>
-<p>Site's not ready yet</p>
-<p>Your name <a href="https://github.com/hootalex/juneau/tree/gh-pages/names">may be recorded</a>, but not implemented. Same goes for vice versa.</p>
-<p>Still changing and testing appearance</p>
+  <input type="button" id="toggle" value="begin?" />
+  <audio loop id="audio" src="">
+  </audio>
 </body>
+
 </html>
