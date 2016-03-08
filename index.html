@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta name="viewport" content="width=380px">
-  <link href="style.css" rel="stylesheet" type="text/css">
-  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-  </script>
-  <script>
+    <title>juneau</title>
+    <meta content="width=380px" name="viewport">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-latest.min.js">
+    </script>
+    <script>
     $(document).ready(function() {
       var name = prompt("What's your name?");
       var name = name.toLowerCase();
@@ -15,36 +15,32 @@
       $("#toggle").addClass("toggleani")
       $("html").addClass("begin")
     });
-  </script>
-  <script src="NoSleep.js"></script>
+    </script>
+    <script src="NoSleep.js">
+    </script>
+</head>
+<body>
+    <form>
+        <input id="toggle" type="button" value="begin?">
+        <script>
+        var noSleep = new NoSleep();
 
-  <input type="button" id="toggle" value="begin?" />
-
-  <script>
-    var noSleep = new NoSleep();
-
-    var wakeLockEnabled = false;
-    var toggleEl = document.querySelector("#toggle");
-    toggleEl.addEventListener('click', function() {
-      if (!wakeLockEnabled) {
+        var wakeLockEnabled = false;
+        var toggleEl = document.querySelector("#toggle");
+        toggleEl.addEventListener('click', function() {
+        if (!wakeLockEnabled) {
         noSleep.enable();
         wakeLockEnabled = true;
         toggleEl.value = "ready";
         document.getElementById('audio').play();
-      } else {
+        } else {
         noSleep.enable();
         wakeLockEnabled = true;
         toggleEl.value = "ready";
-      }
-    }, false);
-  </script>
-  <title>juneau</title>
-</head>
-
-<body>
-  <input type="button" id="toggle" value="begin?" />
-  <audio loop id="audio" src="">
-  </audio>
+        }
+        }, false);
+        </script> <input id="toggle" type="button" value="begin?"> <audio id=
+        "audio" loop="" src=""></audio>
+    </form>
 </body>
-
 </html>
