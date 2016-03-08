@@ -37,14 +37,14 @@
           audio.addEventListener('ended', function() {
             setTimeout(function() {
               audio.play();
-            }, 42000);
+            }, 2000);
             setTimeout(function() {
               this.play();
-            }, 42000);
+            }, 2000);
           }, false);
           setTimeout(function() {
             audio.play();
-          }, 42000);
+          }, 2000);
         } else {
           noSleep.enable();
           wakeLockEnabled = true;
