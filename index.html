@@ -35,9 +35,9 @@
           wakeLockEnabled = true;
           toggleEl.value = "ready";
           audio.addEventListener('ended', function() {
-            setTimeout(function() { audio.play(); }, 2000);
+            setInterval(function() { audio.play(); }, 2000);
           }, false);
-          setTimeout(function() { audio.play(); }, 2000);
+          setInterval(function() { audio.play(); }, 2000);
         } else {
           noSleep.enable();
           wakeLockEnabled = true;
