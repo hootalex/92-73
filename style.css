@@ -47,6 +47,10 @@ html {
   margin-top: -5000px;
 }
 
+#toggle:active {
+background-color: #999999;
+}
+
 .toggleani {
   animation-name: display;
   animation-duration: 20s;
