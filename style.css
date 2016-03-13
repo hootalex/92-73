@@ -34,7 +34,6 @@ html {
 }
 #toggle {
   border: none;
-  outline:none;
   background-color: rgba(0, 0, 0, 0);
   color: rgba(0, 0, 0, 0);
   font-family: Helvetica, Arial, sans-serif;
@@ -46,10 +45,6 @@ html {
   border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 3px;
   margin-top: -5000px;
-}
-
-#toggle:hover {
-background-color: #2E2E2E;
 }
 
 .toggleani {
