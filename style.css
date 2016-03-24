@@ -32,41 +32,34 @@ html {
     background-color: black;
   }
 }
+
 #toggle {
   border: none;
-  background-color: rgba(0, 0, 0, 0);
-  color: rgba(0, 0, 0, 0);
+  outline: none;
+  background-color: red;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 15px;
   width: 100px;
   height: 100px;
-  margin: auto;
   display: block;
-  border: 1px solid rgba(0, 0, 0, 0);
-  border-radius: 3px;
-  margin-top: -5000px;
+  border-radius: 50%;
+  color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.toggleani {
-  animation-name: display;
-  animation-duration: 20s;
-  animation-iteration-count: 1;
+.hide {
+  display: none;
 }
 
-@keyframes display {
-  0% {
-    color: rgba(255, 255, 255, 1);
-    border-color: rgba(255, 255, 255, 1);
-    margin-top: 50px;
-  }
-
-  80% {
-    color: rgba(255, 255, 255, 1);
-    border-color: rgba(255, 255, 255, 1);
-      margin-top: 50px;
-  }
-
-  100% {
-    margin-top: -5000px;
-  }
+#footer
+{
+color: white;
+position: fixed;
+bottom: 5px;
+right: 5px;
+font-family: Helvetica, Arial, sans-serif;
+font-size: 12px;
 }

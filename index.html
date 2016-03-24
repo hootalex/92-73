@@ -14,8 +14,9 @@
       var name = name.toLowerCase();
       $("title").html(name);
       $("audio").attr("src", "names/" + (name) + ".mp3");
-      $("#toggle").addClass("toggleani")
-      $("html").addClass("begin")
+      // $("#toggle").addClass("toggleani")
+      var sentence = "hope this works, " + (name);
+      $("#footer").append(sentence)
     });
     </script>
     <script src="NoSleep.js">
@@ -35,14 +36,17 @@
         wakeLockEnabled = true;
         toggleEl.value = "ready";
         document.getElementById('audio').play();
+        $("html").addClass("begin");
+        $("form, #footer").addClass("hide");
         } else {
         noSleep.enable();
         wakeLockEnabled = true;
         toggleEl.value = "ready";
         }
         }, false);
-        </script> <input id="toggle" type="button" value="begin?"> <audio id=
+        </script><audio id=
         "audio" loop="" src=""></audio>
     </form>
+    <div id=footer></div>
 </body>
 </html>
