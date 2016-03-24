@@ -12,6 +12,7 @@
     $(document).ready(function() {
       var name = prompt("What's your name?");
       var name = name.toLowerCase();
+      var name = name.trim();
       $("title").html(name);
       $("audio").attr("src", "names/" + (name) + ".mp3");
       // $("#toggle").addClass("toggleani")
