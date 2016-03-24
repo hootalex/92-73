@@ -59,7 +59,7 @@ html {
 {
 color: white;
 position: fixed;
-bottom: 5px;
+top: 5px;
 left: 5px;
 font-family: Helvetica, Arial, sans-serif;
 font-size: 12px;
@@ -77,7 +77,7 @@ a:visited {
 {
 color: white;
 position: fixed;
-bottom: 5px;
+top: 5px;
 right: 5px;
 font-family: Helvetica, Arial, sans-serif;
 font-size: 12px;
