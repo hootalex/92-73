@@ -17,7 +17,7 @@ html {
     background-color: black;
   }
   25% {
-    background-color: blue;
+    background-color: yellow;
   }
   50% {
     background-color: black;
@@ -26,7 +26,7 @@ html {
     background-color: black;
   }
   75% {
-    background-color: blue;
+    background-color: yellow;
   }
   100% {
     background-color: black;
@@ -36,7 +36,7 @@ html {
 #toggle {
   border: none;
   outline: none;
-  background-color: blue;
+  background-color: yellow;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 15px;
   width: 100px;
